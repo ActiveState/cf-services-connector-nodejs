@@ -34,7 +34,6 @@
     "database": {
         "enabled": true,
         "allowOrphanedBindings": false,
-        "databaseFile": "./leveldb",
-        "encryptionKey": "!!changeme!!"
+        "databaseFile": "./leveldb"
     }
 }
