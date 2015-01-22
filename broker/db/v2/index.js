@@ -147,9 +147,6 @@ Database.prototype.getAllBindingsForInstance = function (instanceID, next) {
 Database.prototype.storeBinding = function (instanceID, bindingID, reply, next) {
     var db = this;
 
-    /* Ensure credentials are encrypted */
-    reply = Enryptor.encrypt(JSON.stringify(reply). db.opts.encryptionKey);
-
     Async.waterfall([
         function (done) {
             db.getAllBindingsForInstance(instanceID, done);
